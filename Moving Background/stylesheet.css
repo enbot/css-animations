@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
+:root {
+    --animation-duration: 6s;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg {
+    overflow: hidden;
+    height: calc(100vh + 470px);
+    width: 100vw;
+    background-image: repeating-linear-gradient( 135deg, var(--medium-color), var(--medium-color) 100px, var(--light-color) 100px, var(--light-color) 105px, var(--medium-color) 105px, var(--medium-color) 130px, var(--light-color) 130px, var(--light-color) 260px, var(--dark-color) 260px, var(--dark-color) 265px, var(--light-color) 265px, var(--light-color) 270px, var(--dark-color) 270px, var(--dark-color) 330px);
+    animation: run 3s linear infinite, colors var(--animation-duration) linear infinite;
+}
+
+.content {
+    user-select: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: white;
+    text-shadow: -3px 3px 0px var(--dark-color);
+    font-family: 'Barriecito', cursive;
+    animation: colors var(--animation-duration) linear infinite;
+}
+
+@-webkit-keyframes run {
+    to {
+        margin-top: -470px;
+    }
+}
+
+@-webkit-keyframes colors {
+    from, 10% {
+        --dark-color: #770000;
+        --medium-color: #a01313;
+        --light-color: #c62828;
+    }
+    11%, 20% {
+        --dark-color: #ad1457;
+        --medium-color: #c51162;
+        --light-color: #ec407a;
+    }
+    21%, 30% {
+        --dark-color: #1a237e;
+        --medium-color: #303f9f;
+        --light-color: #5c6bc0;
+    }
+    31%, 40% {
+        --dark-color: #2e7d32;
+        --medium-color: #43a047;
+        --light-color: #66bb6a;
+    }
+    41%, 50% {
+        --dark-color: #9e9d24;
+        --medium-color: #afb42b;
+        --light-color: #cddc39;
+    }
+    51%, 60% {
+        --dark-color: #f57c00;
+        --medium-color: #ff9800;
+        --light-color: #ffb74d;
+    }
+    61%, 70% {
+        --dark-color: #6a1b9a;
+        --medium-color: #8e24aa;
+        --light-color: #ab47bc;
+    }
+    71%, 80% {
+        --dark-color: #81d4fa;
+        --medium-color: #b3e5fc;
+        --light-color: #e1f5fe;
+    }
+    81%, 90% {
+        --dark-color: #9e9e9e;
+        --medium-color: #bdbdbd;
+        --light-color: #e0e0e0;
+    }
+    91%, to {
+        --dark-color: #f9a825;
+        --medium-color: #fdd835;
+        --light-color: #ffee58;
+    }
+}
