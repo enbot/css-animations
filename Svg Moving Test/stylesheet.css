@@ -1,0 +1,112 @@
+:root {
+    --background: #37820d;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+.car {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: speedup 5s linear 1s infinite, shake 0.1s linear 1s infinite;
+    margin-left: -5vw;
+    z-index: 3;
+}
+
+.road {
+    position: absolute;
+    top: 35vh;
+    left: 0;
+    width: 100vw;
+    height: 30vh;
+    background: rgb(26, 26, 26);
+    border-top: solid 3px rgb(255, 174, 0);
+    border-bottom: solid 5px rgb(255, 174, 0);
+    z-index: 1;
+}
+
+.tree-n {
+    position: absolute;
+    bottom: 65vh;
+    right: -200vw;
+    z-index: 5;
+    animation: run 1.2s linear 1.2s infinite;
+}
+
+.tree-i {
+    position: absolute;
+    bottom: -5vh;
+    right: -200vw;
+    z-index: 5;
+    animation: run 1.2s linear 1.4s infinite;
+}
+
+.tree-c {
+    position: absolute;
+    bottom: 65vh;
+    right: -200vw;
+    z-index: 5;
+    animation: run 1.2s linear 1.6s infinite;
+}
+
+.tree-e {
+    position: absolute;
+    bottom: -5vh;
+    right: -200vw;
+    z-index: 5;
+    animation: run 1.2s linear 1.8s infinite;
+}
+
+.ink {
+    position: absolute;
+    height: 3px;
+    top: 50vh;
+    right: -100vw;
+    width: 250px;
+    background: #ffffff;
+    animation: run 0.5s linear 1.5s infinite;
+    z-index: 2;
+}
+
+@-webkit-keyframes speedup {
+    from, to {
+        margin-left: -5vw;
+    }
+    25% {
+        margin-left: 8vw;
+    }
+}
+
+@-webkit-keyframes shake {
+    from, to {
+        margin-top: -1px;
+    }
+    50% {
+        margin-top: 2px;
+    }
+}
+
+@-webkit-keyframes run {
+    from, to, 90% {
+        right: -200vw;
+    }
+    50%, 51% {
+        right: 200vw;
+    }
+    from, to, 50% {
+        opacity: 1;
+    }
+    51%, 90% {
+        opacity: 0;
+    }
+}
