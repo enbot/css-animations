@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Play);
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ebebeb;
+    animation: grayscale 0.4s infinite, move 0.1s infinite;
+}
+
+.error {
+    float: left;
+}
+
+.error:nth-child(1), .error:nth-child(2), .error:nth-child(3), .error:nth-child(4), .error:nth-child(5), .error:nth-child(6), .error:nth-child(7) {
+    width: 14.2857142857vw;
+    height: 70vh;
+    border-bottom: solid 10vh transparent;
+}
+
+.error:nth-child(8), .error:nth-child(9), .error:nth-child(10), .error:nth-child(11) {
+    height: 20vh;
+}
+
+.error:nth-child(8), .error:nth-child(9), .error:nth-child(10) {
+    width: 20vw;
+}
+
+.error:nth-child(11) {
+    width: 40vw;
+}
+
+.error:nth-child(1) {
+    background: #5e107e;
+    border-bottom-color: #1410af;
+}
+
+.error:nth-child(2) {
+    background: #e3262d;
+    border-bottom-color: #131313;
+}
+
+.error:nth-child(3) {
+    background: #f69c4e;
+    border-bottom-color: #b218ea;
+}
+
+.error:nth-child(4) {
+    background: #efeb87;
+    border-bottom-color: #131313;
+}
+
+.error:nth-child(5) {
+    background: #219848;
+    border-bottom-color: #19bae8;
+}
+
+.error:nth-child(6) {
+    background: #152fe8;
+    border-bottom-color: #131313;
+}
+
+.error:nth-child(7) {
+    background: #5c1484;
+    border-bottom-color: #d3d3d3;
+}
+
+.error:nth-child(9) {
+    background: #d3d3d3;
+}
+
+.error:nth-child(8), .error:nth-child(10) {
+    background: #171336;
+}
+
+.error:nth-child(11) {
+    background: #0a0a0a;
+}
+
+.content {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Play", sans-serif;
+    font-size: 40pt;
+    color: #e7e7e7;
+    text-shadow: 6px 8px 0 #8d8d8d;
+}
+
+@keyframes move {
+    0%, 100% {
+        left: 0;
+    }
+    50% {
+        left: -30px;
+    }
+}
+
+@keyframes grayscale {
+    0%, 100% {
+        filter: grayscale(15%);
+    }
+    70% {
+        filter: grayscale(40%);
+    }
+}
