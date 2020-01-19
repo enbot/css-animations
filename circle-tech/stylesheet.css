@@ -1,0 +1,49 @@
+:root {
+    --background: #4e0061;
+    --circle-color: #ffffff;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.circle::after {
+    content: "";
+    width: 150px;
+    height: 150px;
+    animation: rotate 0.7s linear infinite reverse;
+}
+
+.circle::before {
+    content: "";
+    width: 200px;
+    height: 200px;
+    animation: rotate 0.7s linear infinite;
+}
+
+.circle::after, .circle::before {
+    border: 10px solid transparent;
+    border-top-color: var(--circle-color);
+    border-bottom-color: var(--circle-color);
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
