@@ -1,0 +1,113 @@
+:root {
+    --progress-color: linear-gradient(45deg, #f44336, #1e88e5);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #fdd835;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress {
+    border-radius: 5px 5px 0 0;
+    display: inline-block;
+    transform-origin: center center;
+    margin: 0px 1px;
+    width: 8px;
+    height: 60px;
+    transform: scaleY(1.8);
+    background: var(--progress-color);
+}
+
+@keyframes progress {
+    0%, 100% {
+        transform: scaleY(1.8);
+    }
+    50% {
+        transform: scaleY(0.5);
+    }
+}
+
+.progress:nth-child(1) {
+    animation: progress 1s ease-in-out 1s infinite;
+}
+
+.progress:nth-child(2) {
+    animation: progress 1s ease-in-out 0.9s infinite;
+}
+
+.progress:nth-child(3) {
+    animation: progress 1s ease-in-out 0.8s infinite;
+}
+
+.progress:nth-child(4) {
+    animation: progress 1s ease-in-out 0.7s infinite;
+}
+
+.progress:nth-child(5) {
+    animation: progress 1s ease-in-out 0.6s infinite;
+}
+
+.progress:nth-child(6) {
+    animation: progress 1s ease-in-out 0.5s infinite;
+}
+
+.progress:nth-child(7) {
+    animation: progress 1s ease-in-out 0.4s infinite;
+}
+
+.progress:nth-child(8) {
+    animation: progress 1s ease-in-out 0.3s infinite;
+}
+
+.progress:nth-child(9) {
+    animation: progress 1s ease-in-out 0.2s infinite;
+}
+
+.progress:nth-child(10) {
+    animation: progress 1s ease-in-out 0.1s infinite;
+}
+
+.progress:nth-child(11) {
+    animation: progress 1s ease-in-out 0.1s infinite;
+}
+
+.progress:nth-child(12) {
+    animation: progress 1s ease-in-out 0.2s infinite;
+}
+
+.progress:nth-child(13) {
+    animation: progress 1s ease-in-out 0.3s infinite;
+}
+
+.progress:nth-child(14) {
+    animation: progress 1s ease-in-out 0.4s infinite;
+}
+
+.progress:nth-child(15) {
+    animation: progress 1s ease-in-out 0.5s infinite;
+}
+
+.progress:nth-child(16) {
+    animation: progress 1s ease-in-out 0.6s infinite;
+}
+
+.progress:nth-child(17) {
+    animation: progress 1s ease-in-out 0.7s infinite;
+}
+
+.progress:nth-child(18) {
+    animation: progress 1s ease-in-out 0.8s infinite;
+}
+
+.progress:nth-child(19) {
+    animation: progress 1s ease-in-out 0.9s infinite;
+}
+
+.progress:nth-child(20) {
+    animation: progress 1s ease-in-out 1s infinite;
+}
