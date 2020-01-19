@@ -1,0 +1,72 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #c62828;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+.e {
+    fill: #eeeeee;
+    stroke: #eeeeee;
+}
+
+.n {
+    fill: #101010;
+    stroke: #101010;
+}
+
+.circle {
+    animation: pulse 1s ease infinite;
+}
+
+.progress path, .circle {
+    opacity: 0;
+}
+
+.progress path:nth-child(1) {
+    animation: pulse 1s ease 0.6s infinite;
+}
+
+.progress path:nth-child(2) {
+    animation: pulse 1s ease 0.4s infinite;
+}
+
+.progress path:nth-child(3) {
+    animation: pulse 1s ease 0.2s infinite;
+}
+
+.progress path:nth-child(4) {
+    animation: pulse 1s ease 0.6s infinite;
+}
+
+.progress path:nth-child(5) {
+    animation: pulse 1s ease 0.4s infinite;
+}
+
+.progress path:nth-child(6) {
+    animation: pulse 1s ease 0.2s infinite;
+}
+
+@-webkit-keyframes pulse {
+    from, to {
+        fill: #550000;
+        opacity: 0;
+    }
+    30% {
+        fill: #fff;
+    }
+    60% {
+        fill: #550000;
+        opacity: 0.9;
+    }
+}

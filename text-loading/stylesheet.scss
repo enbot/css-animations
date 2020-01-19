@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Bahianita&display=swap");
+html, body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    background: #ffffff;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    font-family: "Bahianita", cursive;
+    text-transform: uppercase;
+    font-size: 70px;
+    color: transparent;
+}
+
+@for $i from 1 to 8 {
+    span:nth-child(#{$i}) {
+        animation: run 2s ease $i * 0.1s infinite;
+    }
+}
+
+@keyframes run {
+    from, to {
+        color: #ff8c00;
+        opacity: 0.9;
+    }
+    25%, 75% {
+        color: #4703e2;
+    }
+    50% {
+        color: #55f500;
+        opacity: 0.3;
+    }
+}
