@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Abel");
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdf5c9;
+}
+
+.info {
+    color: #6b3e26;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: "Abel", sans-serif;
+    text-shadow: 2px 2px 0px #ffa5c5;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.bar {
+    display: flex;
+    align-items: flex-end;
+    margin: 0px 5px;
+    width: 50px;
+    height: 100px;
+}
+
+.fill {
+    width: 100%;
+    background-color: #6b3e26;
+    box-shadow: 2px 2px 0px #ffa5c5;
+}
+
+.bar:nth-child(1) .fill {
+    --height: 20%;
+    height: var(--height);
+    animation: run 3s ease-out 0.3s infinite;
+}
+
+.bar:nth-child(2) .fill {
+    --height: 30%;
+    height: var(--height);
+    animation: run 3s ease-out 0.6s infinite;
+}
+
+.bar:nth-child(3) .fill {
+    --height: 40%;
+    height: var(--height);
+    animation: run 3s ease-out 0.9s infinite;
+}
+
+.bar:nth-child(4) .fill {
+    --height: 50%;
+    height: var(--height);
+    animation: run 3s ease-out 1.2s infinite;
+}
+
+.bar:nth-child(5) .fill {
+    --height: 60%;
+    height: var(--height);
+    animation: run 3s ease-out 1.5s infinite;
+}
+
+@keyframes run {
+    0%, 60% {
+        height: var(--height);
+    }
+    25%, 35% {
+        height: 100%;
+    }
+}

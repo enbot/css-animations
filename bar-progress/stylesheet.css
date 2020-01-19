@@ -1,0 +1,45 @@
+:root {
+    --bar-color: repeating-linear-gradient( 45deg, #ee786e, #ee786e 10px, #fceeb5 10px, #fceeb5 20px);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #a2ccb6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar {
+    height: 15px;
+    width: 500px;
+    border: solid 1px #fceeb5;
+    border-radius: 35px;
+    overflow: hidden;
+    margin: 5px 0px;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.fill {
+    width: 1000px;
+    height: 100%;
+    background-image: var(--bar-color);
+    animation: run 5s linear infinite;
+}
+
+@-webkit-keyframes run {
+    0% {
+        margin-left: -480px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
