@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
+:root {
+    --heart-color: "the heart color";
+    --life-color: #ff1111;
+    --heal-color: #21c500;
+    --fight-color: #010101;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #ffde82;
+    font-family: "Major Mono Display", monosFpace;
+    user-select: none;
+}
+
+.heart {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    transform: scale(10);
+}
+
+.heart:nth-child(1) {
+    left: calc(50vw - 239px);
+    top: calc(50vh - 66px);
+}
+
+.heart:nth-child(2) {
+    left: calc(50vw - 77px);
+    top: calc(50vh - 66px);
+}
+
+.heart:nth-child(3) {
+    left: calc(50vw + 85px);
+    top: calc(50vh - 66px);
+}
+
+.fight, .heal {
+    height: 68px;
+    width: 68px;
+    background: var(--life-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+    border: solid 6px var(--fight-color);
+}
+
+.fight:hover, .heal:hover {
+    color: var(--fight-color);
+    background: var(--life-color);
+    cursor: pointer;
+}
+
+.fight {
+    position: absolute;
+    bottom: calc(50vh - 40px);
+    left: 20px;
+}
+
+.heal {
+    position: absolute;
+    bottom: calc(50vh - 40px);
+    right: 20px;
+}
+
+.fight:active {
+    background: var(--fight-color);
+    color: #ffffff;
+    border: solid 6px #ffffff;
+}
+
+.heal:active {
+    background: var(--heal-color);
+    color: #ffffff;
+    border: solid 6px #ffffff;
+}
