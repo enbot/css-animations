@@ -1,5 +1,5 @@
 :root {
-    --background: #4e0061;
+    --background: #4d1089;
     --circle-color: #ffffff;
 }
 
@@ -9,20 +9,31 @@ html, body {
     background: var(--background);
     width: 100vw;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
+}
+
+.circle {
+    position: relative;
+    width: 220px;
+    height: 220px;
 }
 
 .circle::after {
     content: "";
-    width: 150px;
-    height: 150px;
+    --size: 150px;
+    width: var(--size);
+    height: var(--size);
     animation: rotate 0.7s linear infinite reverse;
 }
 
 .circle::before {
     content: "";
-    width: 200px;
-    height: 200px;
+    --size: 200px;
+    width: var(--size);
+    height: var(--size);
     animation: rotate 0.7s linear infinite;
 }
 
@@ -31,19 +42,20 @@ html, body {
     border-top-color: var(--circle-color);
     border-bottom-color: var(--circle-color);
     border-radius: 50%;
-    margin: auto;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    left: calc(100% - 120px - var(--size) / 2);
+    top: calc(100% - 120px - var(--size) / 2);
 }
 
 @keyframes rotate {
     0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
         transform: rotate(0deg);
     }
     100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
